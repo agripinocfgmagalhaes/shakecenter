@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>
+            Shake Shake
+        </title>
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+        <link href="css/sb-admin.css" rel="stylesheet" type="text/css">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                    </button>
+                    <a class="navbar-brand" href="#">Shake Shake</a>
+                </div>
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav side-nav">
+                        <li><a href="index.html">CAIXA</a></li>
+                        <li><a href="compras.html">COMPRAS</a></li>
+                        <li><a href="contagem.html">CONTAGEM DO ESTOQUE</a></li>
+                     
+
+                    </ul>
+                </div>
+            </nav>
+            <div id="page-wrapper">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h2>Caixa - Center Um</h2>
+                    </div>
+                </div>
+                    <hr>
+                <div class="row">
+                    <div class="col-lg-8">
+                        <form class="form-horizontal" id="dynamic">
+                        <div class="col-lg-4">
+                      <label for="select">Turno:</label>
+                      <select class="form-control" id="turno" required="">
+                        <option></option>
+                        <option>Manhã</option>
+                        <option>Tarde</option>
+                        <option>Dia Todo</option>
+                      </select>
+                    </div>
+                    <div class="col-lg-4">
+                        <label>Data</label>
+                        <input type="date" name="" id="data">
+                    </div>
+                    <div class="col-lg-4">
+                        <label>Funcionária(o)</label>
+                        <input type="name" name="func1" id="data">
+                    </div>
+                    <div class="col-lg-4">
+                        <label>Funcionária(o)</label>
+                        <input type="name" name="func2" id="data">
+                    </div>
+                    <div class="col-lg-12">
+                            <table class="table-responsive" style="margin-top:30px">
+                                <thead>
+                                    <tr>
+                                        
+                                        <td style="width: " class="text-center"><label>Produto</label></td>
+                                        <td style="width: " class="text-center"><label>Preço</label></td>
+                                        <td style="width: " class="text-center"><label>Quantidade</label></td>
+                                        <td style="width: " class="text-center"><label>Total </label></td>
+                                    </tr>
+                                </thead>
+                                <tbody id="itemlist">
+                                    <tr>
+                                        <td><input class="form-control input-sm" data-cell="A1" value="Água 500ml" readonly></td>
+                                        <td><input class="form-control input-sm text-center" data-cell="B1" data-format="R$ 0,0.00" value="2.5" readonly></td>
+                                        <td><input class="form-control input-sm text-center" data-cell="C1" data-format="0[.]00" tabindex="1" required=""></td>
+                                        <td><input class="form-control input-sm text-center" data-cell="D1" data-format="R$ 0,0.00" data-formula="B1*C1" readonly></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input class="form-control input-sm" data-cell="A2" value="Casquinha" readonly></td>
+                                        <td><input class="form-control input-sm text-center" data-cell="B2" data-format="R$ 0,0.00" value="2" readonly></td>
+                                        <td><input class="form-control input-sm text-center" data-cell="C2" data-format="0[.]00" tabindex="2" required=""></td>
+                                        <td><input class="form-control input-sm text-center" data-cell="D2" data-format="R$ 0,0.00" data-formula="B2*C2" readonly></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input class="form-control input-sm" data-cell="A3" value="Cascão" readonly></td>
+                                        <td><input class="form-control input-sm text-center" data-cell="B3" data-format="R$ 0,0.00" value="3" readonly></td>
+                                        <td><input class="form-control input-sm text-center" data-cell="C3" data-format="0[.]00" tabindex="3" required=""></td>
+                                        <td><input class="form-control input-sm text-center" data-cell="D3" data-format="R$ 0,0.00" data-formula="B3*C3" readonly></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input class="form-control input-sm" data-cell="A4" value="Sundae" readonly></td>
+                                        <td><input class="form-control input-sm text-center" data-cell="B4" data-format="R$ 0,0.00" value="4" readonly></td>
+                                        <td><input class="form-control input-sm text-center" data-cell="C4" data-format="0[.]00" tabindex="4" required=""></td>
+                                        <td><input class="form-control input-sm text-center" data-cell="D4" data-format="R$ 0,0.00" data-formula="B4*C4" readonly></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input class="form-control input-sm" data-cell="A5" value="Copão" readonly></td>
+                                        <td><input class="form-control input-sm text-center" data-cell="B5" data-format="R$ 0,0.00" value="6" readonly></td>
+                                        <td><input class="form-control input-sm text-center" data-cell="C5" data-format="0[.]00" tabindex="5"></td>
+                                        <td><input class="form-control input-sm text-center" data-cell="D5" data-format="R$ 0,0.00" data-formula="B5*C5" readonly></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input class="form-control input-sm" data-cell="A6" value="Milkshake 300ml" readonly></td>
+                                        <td><input class="form-control input-sm text-center" data-cell="B6" data-format="R$ 0,0.00" value="6" readonly></td>
+                                        <td><input class="form-control input-sm text-center" data-cell="C6" data-format="0[.]00" tabindex="6"></td>
+                                        <td><input class="form-control input-sm text-center" data-cell="D6" data-format="R$ 0,0.00" data-formula="B6*C6" readonly></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input class="form-control input-sm" data-cell="A7" value="Milkshake 400ml" readonly></td>
+                                        <td><input class="form-control input-sm text-center" data-cell="B7" data-format="R$ 0,0.00" value="0" readonly></td>
+                                        <td><input class="form-control input-sm text-center" data-cell="C7" data-format="0[.]00" readonly></td>
+                                        <td><input class="form-control input-sm text-center" data-cell="D7" data-format="R$ 0,0.00" data-formula="B7*C7" readonly></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input class="form-control input-sm" data-cell="A8" value="Milkshake 500ml" readonly></td>
+                                        <td><input class="form-control input-sm text-center" data-cell="B8" data-format="R$ 0,0.00" value="7" readonly></td>
+                                        <td><input class="form-control input-sm text-center" data-cell="C8" data-format="0[.]00" tabindex="7"></td>
+                                        <td><input class="form-control input-sm text-center" data-cell="D8" data-format="R$ 0,0.00" data-formula="B8*C8" readonly></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input class="form-control input-sm" data-cell="A9" value="Mix" readonly></td>
+                                        <td><input class="form-control input-sm text-center" data-cell="B9" data-format="R$ 0,0.00" value="5" readonly></td>
+                                        <td><input class="form-control input-sm text-center" data-cell="C9" data-format="0[.]00" tabindex="8"></td>
+                                        <td><input class="form-control input-sm text-center" data-cell="D9" data-format="R$ 0,0.00" data-formula="B9*C9" readonly></td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr style="margin-top:30px">
+                                        
+                                        <td colspan="3" class="text-right">
+                                            <label for="total">Venda Total :</label>
+                                        </td>
+                                        <td class="text-center">
+                                            <input class="form-control input-sm text-center" data-cell="D10" data-format="$ 0,0.00" data-formula="SUM(D1:D9)" readonly>
+                                        </td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr style="margin-top:30px">
+                                        
+                                        <td colspan="3" class="text-right">
+                                            <label for="total">Saídas :</label>
+                                        </td>
+                                        <td class="text-center">
+                                            <input class="form-control input-sm text-center" data-cell="D11" data-format="$ 0,0.00" tabindex="9">
+                                        </td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr style="margin-top:30px">
+                                        
+                                        <td colspan="3" class="text-right">
+                                            <label for="total">Envelope :</label>
+                                        </td>
+                                        <td class="text-center">
+                                            <input class="form-control input-sm text-center" data-cell="D12" data-format="$ 0,0.00" tabindex="10">
+                                        </td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr style="margin-top:30px">
+                                        
+                                        <td colspan="3" class="text-right">
+                                            <label for="total">Diferença :</label>
+                                        </td>
+                                        <td class="text-center">
+                                            <input class="form-control input-sm text-center" data-cell="D13" data-format="$ 0,0.00" data-formula="D12+D11-D10" readonly></label>
+                                        </td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                            </div>
+                            <div class="col-lg-2">
+                                <button class="btn btn-primary pull-right" id="show_formula" data-shown="0">Show Formula</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/jquery-3.1.1.js"></script>
+        <!-- required for number formatting only -->
+        <script src="js/numeral.min.js"></script>
+        <!-- the jquery calx lib -->
+        <script src="js/jquery-calx-2.2.7.min.js"></script>
+        <script src="js/bootstrap.js" type="text/javascript"></script>
+        <script>
+            $form       = $('#dynamic').calx();
+            $itemlist   = $('#itemlist');
+            $counter    = 5;
+
+            $('#add_item').click(function(e){
+                e.preventDefault();
+                var i = ++$counter;
+                $itemlist.append(
+                    '<tr>\
+                        <td><input class="form-control input-sm text-right" data-cell="A'+i+'" data-format="0"></td>\
+                        <td><input class="form-control input-sm" data-cell="B'+i+'"></td>\
+                        <td><input class="form-control input-sm text-right" data-cell="C'+i+'" data-format="$ 0,0.00"></td>\
+                        <td><input class="form-control input-sm text-right" data-cell="D'+i+'" data-format="0[.]00"></td>\
+                        <td><input class="form-control input-sm text-right" data-cell="E'+i+'" data-format="0,0[.]00 %"></td>\
+                        <td><input class="form-control input-sm text-right" data-cell="F'+i+'" data-format="$ 0,0.00" data-formula="D'+i+'*(C'+i+'-(C'+i+'*E'+i+'))"></td>\
+                        <td class="text-center"><button class="btn-remove btn btn-sm btn-danger"><i class="fa fa-times fa-fw"></i></button></td>\
+                    </tr>'
+                );
+                //console.log('new row appended');
+
+                $form.calx('update');
+                $form.calx('getCell', 'G1').setFormula('SUM(F1:F'+i+')');
+
+                //console.log($form.calx('getSheet'));
+            });
+
+            $('#itemlist').on('click', '.btn-remove', function(){
+                $(this).parent().parent().remove();
+                $form.calx('update');
+                $form.calx('getCell', 'G1').calculate();
+            });
+
+            
+        </script>
+    </body>
+</html>
